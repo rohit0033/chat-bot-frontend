@@ -7,6 +7,7 @@ import { Button } from "../components/ui/button";
 import PageTransition from "../components/PageTransition";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { MovingBorder } from "../components/ui/moving-border";
 
 const SetupOrganisation = () => {
   const [orgData, setOrgData] = useState({
@@ -59,70 +60,75 @@ const SetupOrganisation = () => {
   return (
     <PageTransition>
       <div className="flex justify-center items-center min-h-screen">
-        <Card className="w-full max-w-lg">
-          <CardHeader className="text-center">
-            <h2 className="text-xl font-bold">Setup Organisation</h2>
-          </CardHeader>
-          <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium mb-1" htmlFor="companyName">
-                  Company Name
-                </label>
-                <Input
-                  type="text"
-                  name="companyName"
-                  id="companyName"
-                  value={orgData.companyName}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium mb-1" htmlFor="websiteURL">
-                  Company Website URL
-                </label>
-                <div className="flex gap-2">
+        <MovingBorder>
+          <Card className="w-full max-w-lg backdrop-blur-lg bg-slate-900/50 shadow-xl border-0">
+            <CardHeader className="text-center">
+              <h2 className="text-xl font-bold text-white">Setup Organisation</h2>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium mb-1 text-slate-200" htmlFor="companyName">
+                    Company Name
+                  </label>
                   <Input
-                    type="url"
-                    name="websiteURL"
-                    id="websiteURL"
-                    value={orgData.websiteURL}
+                    type="text"
+                    name="companyName"
+                    id="companyName"
+                    value={orgData.companyName}
                     onChange={handleInputChange}
                     required
+                    className="bg-slate-800/50 border-slate-700 text-white placeholder-slate-400 focus:border-blue-500 focus:ring-blue-500 transition duration-300 ease-in-out"
                   />
-                  <Button type="button" onClick={fetchMetaDescription} disabled={isLoading}>
-                    {isLoading ? "Fetching..." : "Auto-Fetch"}
-                  </Button>
                 </div>
-                {metaDescription && (
-                  <p className="mt-2 text-sm text-gray-600">
-                    <strong>Meta Description:</strong> {metaDescription}
-                  </p>
-                )}
-              </div>
 
-              <div>
-                <label className="block text-sm font-medium mb-1" htmlFor="description">
-                  Company Description
-                </label>
-                <Input
-                  type="text"
-                  name="description"
-                  id="description"
-                  value={orgData.description || metaDescription}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
+                <div>
+                  <label className="block text-sm font-medium mb-1 text-slate-200" htmlFor="websiteURL">
+                    Company Website URL
+                  </label>
+                  <div className="flex gap-2">
+                    <Input
+                      type="url"
+                      name="websiteURL"
+                      id="websiteURL"
+                      value={orgData.websiteURL}
+                      onChange={handleInputChange}
+                      required
+                      className="bg-slate-800/50 border-slate-700 text-white placeholder-slate-400 focus:border-blue-500 focus:ring-blue-500 transition duration-300 ease-in-out"
+                    />
+                    <Button type="button" onClick={fetchMetaDescription} disabled={isLoading} className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
+                      {isLoading ? "Fetching..." : "Auto-Fetch"}
+                    </Button>
+                  </div>
+                  {metaDescription && (
+                    <p className="mt-2 text-sm text-slate-200">
+                      <strong>Meta Description:</strong> {metaDescription}
+                    </p>
+                  )}
+                </div>
 
-              <Button type="submit" className="w-full">
-                Save Organisation
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
+                <div>
+                  <label className="block text-sm font-medium mb-1 text-slate-200" htmlFor="description">
+                    Company Description
+                  </label>
+                  <Input
+                    type="text"
+                    name="description"
+                    id="description"
+                    value={orgData.description || metaDescription}
+                    onChange={handleInputChange}
+                    required
+                    className="bg-slate-800/50 border-slate-700 text-white placeholder-slate-400 focus:border-blue-500 focus:ring-blue-500 transition duration-300 ease-in-out"
+                  />
+                </div>
+
+                <Button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
+                  Save Organisation
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </MovingBorder>
       </div>
     </PageTransition>
   );
