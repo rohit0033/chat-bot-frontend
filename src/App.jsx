@@ -9,12 +9,13 @@ import HomePage from "./pages/HomePage";
 import TestBotpage from "./pages/TestChatbot";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import { LampContainer } from "./components/ui/lamp-container";
 
 function App() {
   return (
-    <>
+    <div className="min-h-screen bg-slate-950">
       <ToastContainer />
-      <div className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+      <LampContainer>
         <Router> 
           <AnimatePresence mode="wait">
             <Routes>
@@ -28,8 +29,8 @@ function App() {
             </Routes>
           </AnimatePresence>
         </Router>
-      </div>
-    </>
+      </LampContainer>
+    </div>
   );
 }
 
