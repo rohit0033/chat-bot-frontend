@@ -3,7 +3,7 @@
 BeyondChats is a modern web application that helps businesses create and integrate intelligent chatbots into their websites. Built with React and enhanced with beautiful animations, this platform offers a seamless experience for setting up and managing AI-powered chat solutions.
 
 ## 🌐 Live Demo
-[BeyondChats Live Demo](https://beyondchats.vercel.app)
+[BeyondChats Live Demo](https://chat-bot-frontend-beta.vercel.app/)
 
 ## ✨ Features
 
@@ -27,3 +27,31 @@ BeyondChats is a modern web application that helps businesses create and integra
 ## 🚀 Getting Started
 
 1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/beyondchats.git
+   cd beyondchats
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:3000`.
+
+## 🔑 Test Credentials
+
+Use the following credentials to test the application:
+
+- **Email**: admin@gmail.com
+- **Password**: rohit123
+- **Verification Code**: 123456
+
+## 📄 License
+
+This project is licensed under the MIT License.
