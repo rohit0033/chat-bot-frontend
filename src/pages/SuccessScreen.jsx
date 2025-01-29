@@ -6,6 +6,7 @@ import { Twitter, Linkedin, Facebook } from 'lucide-react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { MovingBorder } from "../components/ui/moving-border";
+import { SparklesCore } from "../components/ui/sparkles-core";
 
 const SuccessScreen = () => {
   const handleExploreAdminPanel = () => {
@@ -79,6 +80,7 @@ const SuccessScreen = () => {
           </CardContent>
         </Card>
       </MovingBorder>
+      <SparklesCore particleColor="#ffffff" background="transparent" />
     </div>
   );
 };

@@ -8,6 +8,7 @@ import PageTransition from "../components/PageTransition";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { MovingBorder } from "../components/ui/moving-border";
+import { SparklesCore } from "../components/ui/sparkles-core";
 
 const SetupOrganisation = () => {
   const [orgData, setOrgData] = useState({
@@ -129,6 +130,7 @@ const SetupOrganisation = () => {
             </CardContent>
           </Card>
         </MovingBorder>
+        <SparklesCore particleColor="#ffffff" background="transparent" />
       </div>
     </PageTransition>
   );

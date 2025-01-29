@@ -6,6 +6,7 @@ import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
 import { pageTransition, cardAnimation, staggerChildren, fadeInUp } from "../utils/animations";
 import { MovingBorder } from "../components/ui/moving-border";
+import { SparklesCore } from "../components/ui/sparkles-core";
 
 const dummyScrapedData = [
   {
@@ -134,6 +135,7 @@ const ScrapedData = () => {
             </CardFooter>
           </Card>
         </MovingBorder>
+        <SparklesCore particleColor="#ffffff" background="transparent" />
       </motion.div>
     </motion.div>
   );

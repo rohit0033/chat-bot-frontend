@@ -7,6 +7,7 @@ import IntegrationModal from '../utils/IntegrationModal';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { MovingBorder } from "../components/ui/moving-border";
+import { SparklesCore } from "../components/ui/sparkles-core";
 
 const ChatbotIntegration = () => {
   const navigate = useNavigate();
@@ -97,6 +98,7 @@ BeyondChats Team
             </CardContent>
           </Card>
         </MovingBorder>
+        <SparklesCore particleColor="#ffffff" background="transparent" />
       </div>
 
       <IntegrationModal 

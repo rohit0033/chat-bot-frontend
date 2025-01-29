@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css"; // Import toastify CSS
 import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion and AnimatePresence
 import { pageTransition, cardAnimation, fadeInUp } from "../utils/animations"; // Import animations
 import { MovingBorder } from "../components/ui/moving-border"; // Import MovingBorder
+import { SparklesCore } from "../components/ui/sparkles-core"; // Import SparklesCore
 
 const Registration = () => {
   const [formData, setFormData] = useState({
@@ -149,6 +150,7 @@ const Registration = () => {
               </CardContent>
             </Card>
           </MovingBorder>
+          <SparklesCore particleColor="#ffffff" background="transparent" />
         </motion.div>
       </motion.div>
     </motion.div>
